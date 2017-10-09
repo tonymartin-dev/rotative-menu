@@ -1,0 +1,66 @@
+<div ng-controller="MenuCtrl">
+
+<!-- MENU DESKTOP-------------------------------------------------------------->
+  <div class="hidden-md-down" ng-class="[menuClass, active]">
+    <div class="menu-rotator" ng-class="active">
+      <div class="menu" ng-class="active">
+        <div class="first">
+          <a ng-href="#!/about">
+            <div class="menu-box one" ng-click="clickfunc('about', 135)">
+              <h1>About</h1> {{activeFromUpwards}}
+            </div>
+          </a>
+          <a ng-href="#!/portfolio">
+            <div class="menu-box two" ng-click="clickfunc('portfolio', 405)">
+              <h1>Portfolio</h1>
+            </div>
+          </a>
+        </div>
+        <div class="second">
+          <a ng-href="#!/contact">
+            <div class="menu-box three" ng-click="clickfunc('contact', 225)">
+              <h1>Contact</h1>
+            </div>
+          </a>
+          <a ng-href="#!/experiments">
+            <div class="menu-box four" ng-class="active" ng-click="clickfunc('experiments', 315)">
+              <h1>Experiments</h1>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<!-- MENU MOBILE-------------------------------------------------------------->
+  <nav class="menu-mobile">
+    <ul>
+      <a href="#!/about" ng-click="clickfunc('about', 135)"><li class="about-bt">About</li></a>
+      <a href="#!/portfolio" ng-click="clickfunc('portfolio', 405)">><li class="portfolio-bt">Portfolio</li></a>
+      <a href="#!/contact" ng-click="clickfunc('contact', 225)"><li class="contact-bt">Contact</li>
+      <a href="#!/experiments" ng-click="clickfunc('experiments', 315)"><li class="experiments-bt">Experiments</li></a>
+    </ul>
+  </nav>
+
+  <style type="text/css">
+    @keyframes moveleft {
+      from {margin-left: {{moveleft}}px;}
+      to {margin-left: -200px;}
+    }
+
+    @keyframes moveright {
+      from {margin-left: -200px;}
+      to {margin-left: 0px;}
+    }
+
+    @keyframes rotate{{active}} {
+      from {transform: rotate({{rotate0}}deg);}
+      to {transform: rotate({{rotate1}}deg);}
+    }
+
+    @keyframes rotate{{active}}p {
+      from {transform: rotate(-{{rotate0}}deg);}
+      to {transform: rotate(-{{rotate1}}deg);}
+    }
+  </style>
+</div>
