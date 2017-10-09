@@ -5,26 +5,26 @@
     <div class="menu-rotator" ng-class="active">
       <div class="menu" ng-class="active">
         <div class="first">
-          <a ng-href="#!/about">
-            <div class="menu-box one" ng-click="clickfunc('about', 135)">
-              <h1>About</h1> {{activeFromUpwards}}
+          <a ng-href="#!/one">
+            <div class="menu-box one" ng-click="clickfunc(135)">
+              <h1>Section 1</h1>
             </div>
           </a>
-          <a ng-href="#!/portfolio">
-            <div class="menu-box two" ng-click="clickfunc('portfolio', 405)">
-              <h1>Portfolio</h1>
+          <a ng-href="#!/two">
+            <div class="menu-box two" ng-click="clickfunc(405)">
+              <h1>Section 2</h1>
             </div>
           </a>
         </div>
         <div class="second">
-          <a ng-href="#!/contact">
-            <div class="menu-box three" ng-click="clickfunc('contact', 225)">
-              <h1>Contact</h1>
+          <a ng-href="#!/three">
+            <div class="menu-box three" ng-click="clickfunc(225)">
+              <h1>Section 3</h1>
             </div>
           </a>
-          <a ng-href="#!/experiments">
-            <div class="menu-box four" ng-class="active" ng-click="clickfunc('experiments', 315)">
-              <h1>Experiments</h1>
+          <a ng-href="#!/four">
+            <div class="menu-box four" ng-click="clickfunc(315)">
+              <h1>Section 4</h1>
             </div>
           </a>
         </div>
@@ -42,6 +42,7 @@
     </ul>
   </nav>
 
+  <!-- DINAMIC STYLES -------------------------------------------------------------->
   <style type="text/css">
     @keyframes moveleft {
       from {margin-left: {{moveleft}}px;}

@@ -24,23 +24,23 @@ angular
         controller: 'HomeCtrl',
         controllerAs: 'home'
       })
-      .when('/about', {
-        templateUrl: 'views/about.html',
+      .when('/one', {
+        templateUrl: 'views/one.html',
         controller: 'AboutCtrl',
         controllerAs: 'about'
       })
-      .when('/experiments', {
-        templateUrl: 'views/experiments.html',
+      .when('/four', {
+        templateUrl: 'views/four.html',
         controller: 'ExperimentsCtrl',
         controllerAs: 'experiments'
       })
-      .when('/portfolio', {
-        templateUrl: 'views/portfolio.html',
+      .when('/two', {
+        templateUrl: 'views/two.html',
         controller: 'PortfolioCtrl',
         controllerAs: 'portfolio'
       })
-      .when('/contact', {
-        templateUrl: 'views/contact.html',
+      .when('/three', {
+        templateUrl: 'views/three.html',
         controller: 'ContactCtrl',
         controllerAs: 'contact'
       })

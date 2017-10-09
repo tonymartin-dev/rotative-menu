@@ -1,21 +1,21 @@
 //CUSTOM VARIABLES =============================================================
 //https://www.materialpalette.com/
-$about:            #00BCD4;
-$about-dark:       #0097A7;
-$about-light:      #B2EBF2;
-$about-text:       #FFFFFF;
-$portfolio-dark:   #388E3C;
-$portfolio:        #4CAF50;
-$portfolio-light:  #C8E6C9;
-$portfolio-text:   #FFFFFF;
-$contact-dark:     #FFA000;
-$contact:          #FFC107;
-$contact-light:    #FFECB3;
-$contact-text:     #212121;
-$experiments-dark: #5D4037;
-$experiments:      #795548;
-$experiments-light:#D7CCC8;
-$experiments-text: #FFFFFF;
+$one:            #00BCD4;
+$one-dark:       #0097A7;
+$one-light:      #B2EBF2;
+$one-text:       #FFFFFF;
+$two-dark:       #388E3C;
+$two:            #4CAF50;
+$two-light:      #C8E6C9;
+$two-text:       #FFFFFF;
+$three-dark:     #FFA000;
+$three:          #FFC107;
+$three-light:    #FFECB3;
+$three-text:     #212121;
+$four-dark:      #5D4037;
+$four:           #795548;
+$four-light:     #D7CCC8;
+$four-text:      #FFFFFF;
 
 $fontsize: 16px;
 
@@ -131,20 +131,9 @@ a:hover {
   margin: 0;
   border: 0;
   z-index: 999;
-  /*.navbar-default {
-    background-color: rgba(248, 248, 248, 0.5);
-    border: none;
-  }*/
 }
 
-// Angular animations
-@keyframes enterfade {
-  from { opacity: 0; }
-}
-@keyframes leavefade {
-  to { opacity: 0; }
-}
-
+// Angular enter/leave animations
 @keyframes enterslide {
   from {
     transform: translateX(100%);
@@ -205,17 +194,17 @@ a:hover {
       margin: 0;
       padding: 15px 5px;
     }
-    .about-bt {
-      background-color: $about;
+    .one-bt {
+      background-color: $one;
     }
-    .portfolio-bt {
-      background-color: $portfolio;
+    .two-bt {
+      background-color: $two;
     }
-    .contact-bt {
-      background-color: $contact;
+    .three-bt {
+      background-color: $three;
     }
-    .experiments-bt {
-      background-color: $experiments;
+    .four-bt {
+      background-color: $four;
     }
   }
 }
@@ -226,7 +215,7 @@ a:hover {
   position: absolute;
   width: 100%;
 }
-.section-menu.about, .section-menu.portfolio, .section-menu.contact, .section-menu.experiments {
+.section-menu.one, .section-menu.two, .section-menu.three, .section-menu.four {
   position: relative;
   z-index: 10;
   width: 200px;
@@ -268,34 +257,34 @@ a:hover {
         }
       }
       //CLASSES FOR EACH MENU DIV (color and borders)
-      .one{ //About
-        background-color: $about;
+      .one{ //one
+        background-color: $one;
       }
       .one:hover {
-        background-color: $about-light;
+        background-color: $one-light;
       }
-      .two{ //Portfolio
-        background-color: $portfolio;
+      .two{ //two
+        background-color: $two;
       }
       .two:hover {
-        background-color: $portfolio-light;
+        background-color: $two-light;
       }
-      .three{ // Contact
-        background-color: $contact;
+      .three{ // three
+        background-color: $three;
       }
       .three:hover {
-        background-color: $contact-light;
+        background-color: $three-light;
       }
-      .four{ //Experiments
-        background-color: $experiments;
+      .four{ //four
+        background-color: $four;
         }
-      .four.experiments h1 { //translate to the left to fit in the div when rotated
+      .four.four h1 { //translate to the left to fit in the div when rotated
         -ms-transform: rotate(-315deg) translateX(-25px); /* IE 9 */
         -webkit-transform: rotate(-315deg) translateX(-25px); /* Chrome; Safari; Opera */
         transform: rotate(-315deg) translateX(-25px);
       }
       .four:hover {
-        background-color: $experiments-light;
+        background-color: $four-light;
       }
       .one, .two, .three, .four {
         margin: 0;
@@ -304,53 +293,53 @@ a:hover {
   }
 
   //CLASSES FOR EACH MENU ELEMENT--------------------------------
-  .menu.about {
+  .menu.one {
     -ms-transform: rotate(135deg); /* IE 9 */
     -webkit-transform: rotate(135deg); /* Chrome; Safari; Opera */
     transform: rotate(135deg);
-    animation: rotateabout 0.5s;
+    animation: rotateone 0.5s;
     .menu-box h1, a {
       -ms-transform: rotate(-135deg); /* IE 9 */
       -webkit-transform: rotate(-135deg); /* Chrome; Safari; Opera */
       transform: rotate(-135deg);
       transform-origin: bottom;
-      animation: rotateaboutp 0.5s;
+      animation: rotateonep 0.5s;
     }
   }
-  .menu.portfolio {
+  .menu.two {
     -ms-transform: rotate(405deg); /* IE 9 */
     -webkit-transform: rotate(405deg); /* Chrome; Safari; Opera */
     transform: rotate(405deg);
-    animation: rotateportfolio 0.5s;
+    animation: rotatetwo 0.5s;
     .menu-box h1 {
       -ms-transform: rotate(-405deg); /* IE 9 */
       -webkit-transform: rotate(-405deg); /* Chrome; Safari; Opera */
       transform: rotate(-405deg);
-      animation: rotateportfoliop 0.5s;
+      animation: rotatetwop 0.5s;
     }
   }
-  .menu.contact {
+  .menu.three {
     -ms-transform: rotate(225deg); /* IE 9 */
     -webkit-transform: rotate(225deg); /* Chrome; Safari; Opera */
     transform: rotate(225deg);
-    animation: rotatecontact 0.5s;
+    animation: rotatethree 0.5s;
     .menu-box h1 {
       -ms-transform: rotate(-225deg); /* IE 9 */
       -webkit-transform: rotate(-225deg); /* Chrome; Safari; Opera */
       transform: rotate(-225deg);
-      animation: rotatecontactp 0.5s;
+      animation: rotatethreep 0.5s;
     }
   }
-  .menu.experiments {
+  .menu.four {
     -ms-transform: rotate(315deg); /* IE 9 */
     -webkit-transform: rotate(315deg); /* Chrome; Safari; Opera */
     transform: rotate(315deg);
-    animation: rotateexperiments 0.5s;
+    animation: rotatefour 0.5s;
     .menu-box h1 {
       -ms-transform: rotate(-315deg); /* IE 9 */
       -webkit-transform: rotate(-315deg); /* Chrome; Safari; Opera */
       transform: rotate(-315deg);
-      animation: rotateexperimentsp 0.5s;
+      animation: rotatefourp 0.5s;
     }
   }
 }
@@ -358,13 +347,13 @@ a:hover {
 //MENU ACTIVE CLASSES-------------
 
 //Menu slides to the left when click
-.menuInit.about, .menuInit.portfolio, .menuInit.experiments, .menuInit.contact,
-.about.menu-container, .portfolio.menu-container, .experiments.menu-container, .contact.menu-container{
+.menuInit.one, .menuInit.two, .menuInit.four, .menuInit.three,
+.one.menu-container, .two.menu-container, .four.menu-container, .three.menu-container{
     margin-left: -200px;
     animation: moveleft 0.5s;
     display: inline-block;
 }
-.menu-container.about:hover, .menu-container.portfolio:hover, .menu-container.contact:hover, .menu-container.experiments:hover,  {
+.menu-container.one:hover, .menu-container.two:hover, .menu-container.three:hover, .menu-container.four:hover,  {
     margin-left: 0;
     animation: moveright 0.5s;
 }
@@ -382,7 +371,7 @@ a:hover {
 // Active settings
 
 
-.section-content.about, .section-content.portfolio, .section-content.experiments, .section-content.contact,  {
+.section-content {
   display: block;
   position: absolute;
   top: 0;
@@ -391,7 +380,7 @@ a:hover {
 //SECTIONS =====================================================================
 
 //General
-.container, .container.about, .container.portfolio, .container.contact, .container.experiments {
+.container, .container.one, .container.two, .container.three, .container.four {
   position: absolute;
   top: 0;
 }
@@ -407,200 +396,32 @@ a:hover {
   padding-right: 250px;
 }
 
-//About
-.container.about {
-  background-color: $about;
+//one
+.container.one {
+  background-color: $one;
   min-height: 100vh;
   padding-left: 250px;
-  .row{
-    .main {
-      padding-top: 40px;
-      .img-container-l {
-        text-align: center;
-        width: 100%;
-        padding: 40px;
-        img {
-          width: 200px;
-          border-radius: 100%;
-        }
-      }
-      .text-container-l {
-        max-width: 380px;
-        margin: auto;
-      }
-    }
-    .ext {
-      background-color: $about-light;
-      color: black;
-      min-height: 100vh;
-      text-align: right;
-      padding: 50px;
-      .img-container-r {
-        text-align: justify;
-        max-width: 510px;
-        margin: 40px auto;
-        img {
-          display: inline-block;
-          max-height: 150px;
-          margin: 17px;
-          max-width: 70%;
-        }
-      }
-    }
-  }
 }
 
-//Portfolio
-.container.portfolio {
-  background-color: $portfolio;
+//two
+.container.two {
+  background-color: $two;
   min-height: 100vh;
   padding-left: 250px;
-  .row{
-    .main {
-      padding-top: 40px;
-      .img-container-l {
-        text-align: center;
-        width: 100%;
-        padding: 40px;
-        img {
-          width: 200px;
-          border-radius: 100%;
-          background-color: $portfolio-dark;
-        }
-      }
-      .text-container-l {
-        max-width: 380px;
-        margin: auto;
-      }
-    }
-    .ext {
-      background-color: $portfolio-light;
-      color: black;
-      min-height: 100vh;
-      text-align: right;
-      padding: 50px;
-      .img-container-r {
-        text-align: justify;
-        max-width: 510px;
-        margin: 40px auto;
-        .portfolio-img {
-          width: 100%;
-          position: relative;
-          margin-bottom: 50px;
-          img {
-            width: 100%;
-          }
-          .portfolio-desc {
-            position: absolute;
-            bottom: 0;
-            width: 100%;
-            padding: 25px;
-            background-color: $portfolio;
-          }
-        }
-      }
-    }
-  }
 }
 
-//Contact
-.container.contact {
-  background-color: $contact;
+//three
+.container.three {
+  background-color: $three;
   min-height: 100vh;
   padding-left: 250px;
-  .row{
-    .main {
-      padding-top: 40px;
-      .img-container-l {
-        text-align: center;
-        width: 100%;
-        padding: 40px;
-        img {
-          width: 200px;
-          border-radius: 100%;
-          background-color: $contact-dark;
-        }
-      }
-      .text-container-l {
-        max-width: 380px;
-        margin: auto;
-      }
-    }
-    .ext {
-      background-color: $contact-light;
-      color: black;
-      min-height: 100vh;
-      text-align: right;
-      padding: 50px;
-      .social {
-        max-width: 510px;
-        width: 80%;
-        margin: 50px auto;
-        .logo {
-          width: 30%;
-          display: inline-block;
-          margin: 15px;
-        }
-        .text{
-          width: 40%;
-          display: inline-block;
-        }
-      }
-    }
-  }
 }
 
-//Experiments
-.container.experiments {
-  background-color: $experiments;
+//four
+.container.four {
+  background-color: $four;
   min-height: 100vh;
   padding-left: 250px;
-  .row{
-    .main {
-      padding-top: 40px;
-      .img-container-l {
-        text-align: center;
-        width: 100%;
-        padding: 40px;
-        img {
-          width: 200px;
-          border-radius: 100%;
-          background-color: $experiments-dark;
-        }
-      }
-      .text-container-l {
-        max-width: 380px;
-        margin: auto;
-      }
-    }
-    .ext {
-      background-color: $experiments-light;
-      color: black;
-      min-height: 100vh;
-      text-align: right;
-      padding: 50px;
-      .img-container-r {
-        text-align: justify;
-        max-width: 510px;
-        margin: 40px auto;
-        .portfolio-img {
-          width: 100%;
-          position: relative;
-          margin-bottom: 50px;
-          img {
-            width: 100%;
-          }
-          .portfolio-desc {
-            position: absolute;
-            bottom: 0;
-            width: 100%;
-            padding: 25px;
-            background-color: $experiments;
-          }
-        }
-      }
-    }
-  }
 }
 
 //FOOTER=======================================================
@@ -627,11 +448,7 @@ a:hover {
   .menu-mobile{
     display: block;
   }
-  /*.menu-container, .menu-container.about, .menu-container.portfolio, .menu-container.contact, .menu-container.experiments,
-  .menuInit, .menuInit.about, .menuInit.portfolio, .menuInit.contact, .menuInit.experiments,  {
-    display: none;
-  }*/
-  .container, .container.home, .container.about, .container.portfolio, .container.contact, .container.experiments {
+  .container, .container.home, .container.one, .container.two, .container.three, .container.four {
     margin: 0;
     padding: 0;
   }
